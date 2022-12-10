@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidCoinh</string>
+    <string name="title_wallet">Coin Wallet</string>
 </resources>
