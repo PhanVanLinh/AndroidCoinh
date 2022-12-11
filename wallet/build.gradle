@@ -24,9 +24,10 @@ dependencies {
     implementation project(':core')
     implementation "androidx.core:core-ktx:$versions.coreKtx"
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
-    implementation "com.google.android.material:$versions.material"
+    implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
     testImplementation "junit:junit:$versions.junit"
+    testImplementation "com.google.truth:truth:$versions.truth"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidTestExtJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espressoCore"
     androidTestImplementation "androidx.annotation:annotation:$versions.androidTestAnnotation"

@@ -36,7 +36,7 @@ android {
 dependencies {
     implementation "androidx.core:core-ktx:$versions.coreKtx"
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
-    implementation "com.google.android.material:$versions.material"
+    implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
     testImplementation "junit:junit:$versions.junit"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidTestExtJunit"
