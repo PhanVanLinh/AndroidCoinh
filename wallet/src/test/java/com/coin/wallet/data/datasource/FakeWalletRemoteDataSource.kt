@@ -3,11 +3,12 @@ package com.coin.wallet.data.datasource
 import com.coin.core.domain.model.Currency
 import com.coin.wallet.domain.repository.datasource.remote.WalletRemoteDataSource
 import java.math.BigDecimal
+import com.coin.core.domain.data.Result
 
 class FakeWalletRemoteDataSource : WalletRemoteDataSource {
 
     override fun getCurrencies(counterCurrency: String): Result<List<Currency>> {
-        return Result.success(USD_COUNTER_DEFAULT_CURRENCIES)
+        return Result.Success(USD_COUNTER_DEFAULT_CURRENCIES)
     }
 
     companion object {
