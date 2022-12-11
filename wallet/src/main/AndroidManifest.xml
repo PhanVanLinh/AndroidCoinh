@@ -12,7 +12,9 @@
         <dist:fusing dist:include="false" />
     </dist:module>
 
-    <application>
+    <application
+        android:name="com.coin.androidcoinh.CoinhApplication"
+        >
         <activity
             android:name=".ui.wallet.WalletActivity"
             android:exported="true">

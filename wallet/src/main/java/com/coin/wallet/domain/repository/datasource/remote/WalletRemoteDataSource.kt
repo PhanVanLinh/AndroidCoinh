@@ -5,5 +5,5 @@ import com.coin.core.domain.data.Result
 
 
 interface WalletRemoteDataSource {
-    fun getCurrencies(counterCurrency: String): Result<List<Currency>>
+    suspend fun getCurrencies(counterCurrency: String): Result<List<Currency>>
 }

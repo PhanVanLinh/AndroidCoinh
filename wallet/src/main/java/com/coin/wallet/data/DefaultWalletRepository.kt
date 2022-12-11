@@ -9,7 +9,7 @@ class DefaultWalletRepository(
     private val walletRemoteDataSource: WalletRemoteDataSource
 ) : WalletRepository {
 
-    override fun getCurrencies(counterCurrency: String): Result<List<Currency>> {
+    override suspend fun getCurrencies(counterCurrency: String): Result<List<Currency>> {
         return walletRemoteDataSource.getCurrencies(counterCurrency)
     }
 }

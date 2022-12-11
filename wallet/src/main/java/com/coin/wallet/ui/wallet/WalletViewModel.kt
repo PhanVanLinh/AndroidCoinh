@@ -8,9 +8,12 @@ import kotlinx.coroutines.flow.SharedFlow
 import com.coin.core.domain.data.Result
 import com.coin.wallet.R
 import com.coin.wallet.ui.wallet.model.CurrencyModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class WalletViewModel(val getCryptoCurrenciesUseCase: GetCryptoCurrenciesUseCase) : ViewModel() {
+@HiltViewModel
+class WalletViewModel @Inject constructor(val getCryptoCurrenciesUseCase: GetCryptoCurrenciesUseCase) : ViewModel() {
 
     private val _walletUiState = MutableStateFlow(WalletUiState(loading = true))
     val walletUiState: SharedFlow<WalletUiState> = _walletUiState
