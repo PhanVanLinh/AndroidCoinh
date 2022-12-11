@@ -4,5 +4,5 @@ import com.coin.core.domain.model.Currency
 import com.coin.core.domain.data.Result
 
 interface WalletRepository {
-    fun getCurrencies(counterCurrency: String): Result<List<Currency>>
+    suspend fun getCurrencies(counterCurrency: String): Result<List<Currency>>
 }
