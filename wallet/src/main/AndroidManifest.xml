@@ -14,7 +14,7 @@
 
     <application>
         <activity
-            android:name=".WalletActivity"
+            android:name=".ui.wallet.WalletActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

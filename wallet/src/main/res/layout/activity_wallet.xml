@@ -4,12 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WalletActivity">
+    android:background="@color/dark_jungle_green"
+    android:padding="@dimen/spacing_4x"
+    tools:context=".ui.wallet.WalletActivity">
 
     <TextView
+        android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wallet"
+        android:text="My Wallet"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
         tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:tooltipText="ABC"
+        app:layout_constraintBottom_toBottomOf="@id/text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/spacing_4x"
+        android:background="@drawable/wallet_bg_button_buy"
+        android:text="Buy"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/button_sell"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:background="@drawable/wallet_bg_button_sell"
+        android:text="Sell"
+        android:textColor="#4466f0"
+        app:layout_constraintBottom_toBottomOf="@id/button_buy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_buy"
+        app:layout_constraintTop_toTopOf="@id/button_buy" />
+
+    <EditText
+        android:id="@+id/edit_search"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="@dimen/spacing_4x"
+        android:background="@drawable/wallet_bg_search"
+        android:hint="Search..."
+        android:paddingHorizontal="@dimen/spacing_2x"
+        android:textColor="@color/glaucous"
+        android:textColorHint="@color/glaucous"
+        app:layout_constraintTop_toBottomOf="@id/button_buy" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_currencies"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_4x"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/spacing_4x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_search"
+        tools:listitem="@layout/wallet_item_currency" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
